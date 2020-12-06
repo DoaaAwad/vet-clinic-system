@@ -60,15 +60,15 @@
 			</tr>
 			
 			<!-- loap over and print Pets -->
-			<c:forEach var="tempPet" items="${Pets}">
+			<c:forEach var="tempPet" items="${pets}">
 			
 				<!-- Create an update and delete Links with Pet id -->
 				<c:url var="updateLink" value="/Pet/showFormToUpdate">
-					<c:param name="PetId" value="${tempPet.PetId}"/>
+					<c:param name="PetId" value="${tempPet.petId}"/>
 				</c:url>
 				
 				<c:url var="deleteLink" value="/Pet/deletePet">
-					<c:param name="PetId" value="${tempPet.PetId}"/>
+					<c:param name="PetId" value="${tempPet.petId}"/>
 				</c:url>
 				
 				<tr>
