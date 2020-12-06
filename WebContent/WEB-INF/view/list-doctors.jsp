@@ -33,7 +33,7 @@
 			
 			<!--  add a search box -->
 			<form:form action="searchDoctorsByDoctorId" method="GET">
-				Clinic Id: <input type="text" name="clinicId" />	
+				Doctor Id: <input type="text" name="doctorId" />	
 				<input type="submit" value="Search Doctor" class="add-button" />
 			</form:form>
 			

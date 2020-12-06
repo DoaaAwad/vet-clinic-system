@@ -41,7 +41,7 @@ public class VisitController {
 		return "list-visits";
 	}
 	
-	@PostMapping("/showFormToAddVisit")
+	@GetMapping("/showFormToAddVisit")
 	public String showFormToAddVisit(Model model) {
 		List<Doctor> doctorsList = vetClinicService.listAllDoctors();
 		List<Clinic> clinicList = vetClinicService.listAllClinics();
@@ -62,7 +62,7 @@ public class VisitController {
 		return"redirect:/visit/list";
 	}
 	
-	@GetMapping("/showFormToUpdate")
+	@PostMapping("/showFormToUpdate")
 	public String showFormToUpdate(@RequestParam("visitId") int id , Model model) {
 		List<Doctor> doctorsList = vetClinicService.listAllDoctors();
 		List<Clinic> clinicList = vetClinicService.listAllClinics();

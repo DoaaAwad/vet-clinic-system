@@ -22,7 +22,7 @@
 
 	<div id="wrapper">
 		<div id="header">
-		<h2> Clinic Relationship Manager</h2>
+		<h2> Clinic Manager</h2>
 		</div>
 	</div>
 	
@@ -35,7 +35,7 @@
 			/>
 			<!--  add a search box -->
 			<form:form action="searchClinicsByClinicId" method="GET">
-				Clinic Id: <input type="text" name="phone" />	
+				Clinic Id: <input type="text" name="clinicId" />	
 				<input type="submit" value="Search" class="add-button" />
 			</form:form>
 			
@@ -47,7 +47,7 @@
 			
 			<!--  add a search box -->
 			<form:form action="searchClinicsByAddress" method="GET">
-				Address: <input type="text" name="phone" />	
+				Address: <input type="text" name="address" />	
 				<input type="submit" value="Search" class="add-button" />
 			</form:form>
 			

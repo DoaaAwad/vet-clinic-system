@@ -36,7 +36,7 @@
 			
 			<!--  add a search box -->
 			<form:form action="searchByVisitId" method="GET">
-				Visit Id: <input type="text" name="VisitId" />	
+				Visit Id: <input type="text" name="visitId" />	
 				<input type="submit" value="Search" class="add-button" />
 			</form:form>
 			

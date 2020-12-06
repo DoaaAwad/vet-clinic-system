@@ -25,15 +25,15 @@
 	<div id="container">
 		<h3>Save Clinic</h3>
 		
-		<form:form action="saveClinic" modelAttribute="Clinic" method="POST">
+		<form:form action="saveClinic" modelAttribute="clinic" method="POST">
 			<!-- need to associate data with Clinic id  -->
-			<form:hidden path="ClinicId"/>
+			<form:hidden path="clinicId"/>
 		
 			<table>
 				<tbody>
 					<tr>
 					<td><label>Clinic Name: </label></td>
-					<td> <form:input path="ClinicName"  required = "true"/> </td>
+					<td> <form:input path="clinicName"  required = "true"/> </td>
 					</tr>
 					
 					<tr>

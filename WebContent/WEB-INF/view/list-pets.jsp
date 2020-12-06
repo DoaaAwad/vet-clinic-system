@@ -36,7 +36,7 @@
 			
 			<!--  add a search box -->
 			<form:form action="searchPetsByPetId" method="GET">
-				Pet Id: <input type="text" name="ownerId" />	
+				Pet Id: <input type="text" name="petId" />	
 				<input type="submit" value="Search" class="add-button" />
 			</form:form>
 			
