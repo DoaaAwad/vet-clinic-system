@@ -1,6 +1,9 @@
-<%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,7 +40,13 @@
 					
 					<tr>
 					<td><label>Clinic Id: </label></td>
-					<td> <form:input path="clinic" /> </td>
+					<td> <!--form:input path="clinic" /--> 
+						<select name="clinic">
+						    <c:forEach items="${clinicsList}" var="clinic">
+						        <option value="${clinic}">${clinic.clinicName}</option>
+						    </c:forEach>
+						</select>
+					</td>
 					</tr>
 					
 					<tr>
