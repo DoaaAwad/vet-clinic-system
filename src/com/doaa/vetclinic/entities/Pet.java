@@ -3,7 +3,6 @@
  */
 package com.doaa.vetclinic.entities;
 
-import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
@@ -28,7 +27,7 @@ public class Pet {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="PET_ID")
-	private BigDecimal petId;
+	private int petId;
 		
 	@ManyToOne
 	@JoinColumn(name = "OWNER_ID")
@@ -56,7 +55,7 @@ public class Pet {
 	private String photoURL3;
 
 	@Column(name = "WEIGHT")
-	private BigDecimal weight;
+	private int weight;
 	
 	@OneToMany(mappedBy = "pet")
 	private List<Visit> petVisits;
@@ -65,8 +64,8 @@ public class Pet {
 
 	}
 
-	public Pet(BigDecimal petId, Owner owner, String petName, String gender, Date birthDate, String animalKind,
-			String photoURL1, String photoURL2, String photoURL3, BigDecimal weight) {
+	public Pet(int petId, Owner owner, String petName, String gender, Date birthDate, String animalKind,
+			String photoURL1, String photoURL2, String photoURL3, int weight) {
 		this.petId = petId;
 		this.owner = owner;
 		this.petName = petName;
@@ -79,11 +78,11 @@ public class Pet {
 		this.weight = weight;
 	}
 
-	public BigDecimal getPetId() {
+	public int getPetId() {
 		return petId;
 	}
 
-	public void setPetId(BigDecimal petId) {
+	public void setPetId(int petId) {
 		this.petId = petId;
 	}
 
@@ -151,11 +150,11 @@ public class Pet {
 		this.photoURL3 = photoURL3;
 	}
 
-	public BigDecimal getWeight() {
+	public int getWeight() {
 		return weight;
 	}
 
-	public void setWeight(BigDecimal weight) {
+	public void setWeight(int weight) {
 		this.weight = weight;
 	}
 

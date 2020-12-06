@@ -3,10 +3,8 @@
  */
 package com.doaa.vetclinic.DAOs;
 
-import java.math.BigDecimal;
 import java.util.List;
 
-import com.doaa.vetclinic.entities.Owner;
 import com.doaa.vetclinic.entities.Pet;
 
 /**
@@ -17,11 +15,11 @@ public interface PetDAO {
 
 	public List<Pet> listAllPets();
 	
-	public List<Pet> listPetsByOwnerId(BigDecimal ownerId);
+	public List<Pet> listPetsByOwnerId(int ownerId);
 
 	public void savePet(Pet pet);
 
-	public void deletePet(BigDecimal id);
+	public void deletePet(int id);
 	
-	public Pet getPetById(BigDecimal id);
+	public Pet getPetById(int id);
 }

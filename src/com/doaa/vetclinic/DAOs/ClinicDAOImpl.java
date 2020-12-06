@@ -3,7 +3,6 @@
  */
 package com.doaa.vetclinic.DAOs;
 
-import java.math.BigDecimal;
 import java.util.List;
 
 import org.hibernate.Session;
@@ -37,17 +36,14 @@ public class ClinicDAOImpl implements ClinicDAO {
 	}
 
 	@Override
-	public List<Clinic> searchClinicByPhone(BigDecimal phoneNum) {
+	public List<Clinic> searchClinicByPhone(int phoneNum) {
 		
 		Session currentSession=sessionFactory.getCurrentSession();
 		
 		Query query=null;
-		if(phoneNum != null) {
-			query=currentSession.createQuery("from Clinic where phone =:phoneNum" , Clinic.class);
-			query.setParameter("phoneNum", phoneNum);
-		} else {
-			return listAllClinics();
-		}
+		query=currentSession.createQuery("from Clinic where phone =:phoneNum" , Clinic.class);
+		query.setParameter("phoneNum", phoneNum);
+	
 		List<Clinic> clinicsList = query.getResultList();
 		return clinicsList;
 	}
@@ -79,7 +75,7 @@ public class ClinicDAOImpl implements ClinicDAO {
 	}
 
 	@Override
-	public void deleteClinic(BigDecimal id) {
+	public void deleteClinic(int id) {
 
 		Session currentSession=sessionFactory.getCurrentSession();
 		
@@ -90,7 +86,7 @@ public class ClinicDAOImpl implements ClinicDAO {
 	}
 
 	@Override
-	public Clinic getClinicById(BigDecimal id) {
+	public Clinic getClinicById(int id) {
 
 		Session currentSession=sessionFactory.getCurrentSession();
 		

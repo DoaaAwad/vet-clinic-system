@@ -3,7 +3,6 @@
  */
 package com.doaa.vetclinic.controllers;
 
-import java.math.BigDecimal;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -61,7 +60,7 @@ public class PetController {
 	}
 	
 	@GetMapping("/showFormToUpdate")
-	public String showFormToUpdate(@RequestParam("petId") BigDecimal id , Model model) {
+	public String showFormToUpdate(@RequestParam("petId") int id , Model model) {
 		
 		List<Owner> ownersList = vetClinicService.listAllOwners();
 		model.addAttribute("ownersList", ownersList);
@@ -74,7 +73,7 @@ public class PetController {
 	}
 	
 	@GetMapping("/deletePet")
-	public String deletePet(@RequestParam("petId") BigDecimal id , Model model) {
+	public String deletePet(@RequestParam("petId") int id , Model model) {
 		
 		vetClinicService.deletePet(id);
 		
@@ -82,7 +81,7 @@ public class PetController {
 	}
 	
 	@GetMapping("/searchPetsByOwnerId")
-	public String searchPetsByOwnerId(@RequestParam("ownerId") BigDecimal ownerId ,Model model) {
+	public String searchPetsByOwnerId(@RequestParam("ownerId") int ownerId ,Model model) {
 		
 		List<Pet> pets=vetClinicService.listPetsByOwnerId(ownerId);
 		
@@ -92,7 +91,7 @@ public class PetController {
 	}
 	
 	@GetMapping("/searchPetsByPetId")
-	public String searchPetsByPetId(@RequestParam("petId") BigDecimal petId ,Model model) {
+	public String searchPetsByPetId(@RequestParam("petId") int petId ,Model model) {
 		
 		Pet pet=vetClinicService.getPetById(petId);
 		

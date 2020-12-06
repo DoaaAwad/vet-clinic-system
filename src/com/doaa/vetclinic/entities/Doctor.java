@@ -3,7 +3,6 @@
  */
 package com.doaa.vetclinic.entities;
 
-import java.math.BigDecimal;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -36,7 +35,7 @@ public class Doctor {
 	private String doctorName;
 	
 	@Column(name = "PHONE")
-	private BigDecimal phone;
+	private int phone;
 	
 	@Column(name = "PHOTO_URL")
 	private String photoUrl;
@@ -51,7 +50,7 @@ public class Doctor {
 	
 	}
 
-	public Doctor(int doctorId, Clinic clinic, String doctorName, BigDecimal phone, String photoUrl, String bio) {
+	public Doctor(int doctorId, Clinic clinic, String doctorName, int phone, String photoUrl, String bio) {
 		this.doctorId = doctorId;
 		this.clinic = clinic;
 		this.doctorName = doctorName;
@@ -84,11 +83,11 @@ public class Doctor {
 		this.doctorName = doctorName;
 	}
 
-	public BigDecimal getPhone() {
+	public int getPhone() {
 		return phone;
 	}
 
-	public void setPhone(BigDecimal phone) {
+	public void setPhone(int phone) {
 		this.phone = phone;
 	}
 

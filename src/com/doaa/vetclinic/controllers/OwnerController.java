@@ -3,7 +3,6 @@
  */
 package com.doaa.vetclinic.controllers;
 
-import java.math.BigDecimal;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,7 +56,7 @@ public class OwnerController {
 	}
 	
 	@GetMapping("/showFormToUpdate")
-	public String showFormToUpdate(@RequestParam("ownerId") BigDecimal id , Model model) {
+	public String showFormToUpdate(@RequestParam("ownerId") int id , Model model) {
 		
 		Owner owner = vetClinicService.getOwnerById(id);
 		
@@ -67,7 +66,7 @@ public class OwnerController {
 	}
 	
 	@GetMapping("/deleteOwner")
-	public String deleteOwner(@RequestParam("ownerId") BigDecimal id , Model model) {
+	public String deleteOwner(@RequestParam("ownerId") int id , Model model) {
 		
 		vetClinicService.deleteOwner(id);
 		
@@ -76,7 +75,7 @@ public class OwnerController {
 	
 	
 	@GetMapping("/searchByOwnerId")
-	public String searchByOwnerId(@RequestParam("ownerId") BigDecimal ownerId ,Model model) {
+	public String searchByOwnerId(@RequestParam("ownerId") int ownerId ,Model model) {
 		
 		Owner owner=vetClinicService.getOwnerById(ownerId);
 		

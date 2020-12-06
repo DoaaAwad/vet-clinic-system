@@ -3,7 +3,6 @@
  */
 package com.doaa.vetclinic.DAOs;
 
-import java.math.BigDecimal;
 import java.util.List;
 
 import com.doaa.vetclinic.entities.Visit;
@@ -18,7 +17,7 @@ public interface VisitDAO {
 	
 	public void saveVisit(Visit visit);
 
-	public void deleteVisit(BigDecimal id);
+	public void deleteVisit(int id);
 	
-	public Visit getVisitById(BigDecimal id);
+	public Visit getVisitById(int id);
 }

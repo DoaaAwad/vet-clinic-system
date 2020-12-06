@@ -3,7 +3,6 @@
  */
 package com.doaa.vetclinic.DAOs;
 
-import java.math.BigDecimal;
 import java.util.List;
 
 import com.doaa.vetclinic.entities.Doctor;
@@ -16,12 +15,12 @@ public interface DoctorDAO {
 	
 	public List<Doctor> listAllDoctors();
 	
-	public List<Doctor> listDoctorsByClinicId(BigDecimal clinicId);
+	public List<Doctor> listDoctorsByClinicId(int clinicId);
 	
 	public void saveDoctor(Doctor doctor);
 
-	public void deleteDoctor(BigDecimal id);
+	public void deleteDoctor(int id);
 	
-	public Doctor getDoctorById(BigDecimal id);
+	public Doctor getDoctorById(int id);
 
 }

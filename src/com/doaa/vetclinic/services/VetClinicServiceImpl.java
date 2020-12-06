@@ -3,7 +3,6 @@
  */
 package com.doaa.vetclinic.services;
 
-import java.math.BigDecimal;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,13 +56,13 @@ public class VetClinicServiceImpl implements VetClinicService{
 	}
 
 	@Override
-	public void deleteOwner(BigDecimal id) {
+	public void deleteOwner(int id) {
 		// TODO Auto-generated method stub
 		ownerDAO.deleteOwner(id);
 	}
 
 	@Override
-	public Owner getOwnerById(BigDecimal id) {
+	public Owner getOwnerById(int id) {
 		// TODO Auto-generated method stub
 		return ownerDAO.getOwnerById(id);
 	}
@@ -75,7 +74,7 @@ public class VetClinicServiceImpl implements VetClinicService{
 	}
 
 	@Override
-	public List<Pet> listPetsByOwnerId(BigDecimal ownerId) {
+	public List<Pet> listPetsByOwnerId(int ownerId) {
 		// TODO Auto-generated method stub
 		return petDAO.listPetsByOwnerId(ownerId);
 	}
@@ -87,13 +86,13 @@ public class VetClinicServiceImpl implements VetClinicService{
 	}
 
 	@Override
-	public void deletePet(BigDecimal id) {
+	public void deletePet(int id) {
 		// TODO Auto-generated method stub
 		petDAO.deletePet(id);
 	}
 
 	@Override
-	public Pet getPetById(BigDecimal id) {
+	public Pet getPetById(int id) {
 		// TODO Auto-generated method stub
 		return petDAO.getPetById(id);
 	}
@@ -105,7 +104,7 @@ public class VetClinicServiceImpl implements VetClinicService{
 	}
 
 	@Override
-	public List<Clinic> searchClinicByPhone(BigDecimal phoneNum) {
+	public List<Clinic> searchClinicByPhone(int phoneNum) {
 		// TODO Auto-generated method stub
 		return clinicDAO.searchClinicByPhone(phoneNum);
 	}
@@ -123,13 +122,13 @@ public class VetClinicServiceImpl implements VetClinicService{
 	}
 
 	@Override
-	public void deleteClinic(BigDecimal id) {
+	public void deleteClinic(int id) {
 		// TODO Auto-generated method stub
 		clinicDAO.deleteClinic(id);
 	}
 
 	@Override
-	public Clinic getClinicById(BigDecimal id) {
+	public Clinic getClinicById(int id) {
 		// TODO Auto-generated method stub
 		return clinicDAO.getClinicById(id);
 	}
@@ -141,7 +140,7 @@ public class VetClinicServiceImpl implements VetClinicService{
 	}
 
 	@Override
-	public List<Doctor> listDoctorsByClinicId(BigDecimal clinicId) {
+	public List<Doctor> listDoctorsByClinicId(int clinicId) {
 		// TODO Auto-generated method stub
 		return doctorDAO.listDoctorsByClinicId(clinicId);
 	}
@@ -153,13 +152,13 @@ public class VetClinicServiceImpl implements VetClinicService{
 	}
 
 	@Override
-	public void deleteDoctor(BigDecimal id) {
+	public void deleteDoctor(int id) {
 		// TODO Auto-generated method stub
 		doctorDAO.deleteDoctor(id);
 	}
 
 	@Override
-	public Doctor getDoctorById(BigDecimal id) {
+	public Doctor getDoctorById(int id) {
 		// TODO Auto-generated method stub
 		return doctorDAO.getDoctorById(id);
 	}
@@ -177,13 +176,13 @@ public class VetClinicServiceImpl implements VetClinicService{
 	}
 
 	@Override
-	public void deleteVisit(BigDecimal id) {
+	public void deleteVisit(int id) {
 		// TODO Auto-generated method stub
 		visitDAO.deleteVisit(id);
 	}
 
 	@Override
-	public Visit getVisitById(BigDecimal id) {
+	public Visit getVisitById(int id) {
 		// TODO Auto-generated method stub
 		return visitDAO.getVisitById(id);
 	}

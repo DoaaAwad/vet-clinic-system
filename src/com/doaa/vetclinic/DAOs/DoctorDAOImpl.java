@@ -3,7 +3,6 @@
  */
 package com.doaa.vetclinic.DAOs;
 
-import java.math.BigDecimal;
 import java.util.List;
 
 import org.hibernate.Session;
@@ -37,18 +36,14 @@ public class DoctorDAOImpl implements DoctorDAO{
 	}
 
 	@Override
-	public List<Doctor> listDoctorsByClinicId(BigDecimal clinicId) {
+	public List<Doctor> listDoctorsByClinicId(int clinicId) {
 
 		Session currentSession=sessionFactory.getCurrentSession();
 		
 		Query query=null;
 		
-		if(clinicId != null) {
-			query=currentSession.createQuery("from Doctor where clinic =:id" , Pet.class);
-			query.setParameter("id", clinicId);
-		} 
-		else 
-			return listAllDoctors();
+		query=currentSession.createQuery("from Doctor where clinic =:id" , Pet.class);
+		query.setParameter("id", clinicId);
 		
 		return query.getResultList();
 	}
@@ -62,7 +57,7 @@ public class DoctorDAOImpl implements DoctorDAO{
 	}
 
 	@Override
-	public void deleteDoctor(BigDecimal id) {
+	public void deleteDoctor(int id) {
 
 		Session currentSession=sessionFactory.getCurrentSession();
 		
@@ -73,7 +68,7 @@ public class DoctorDAOImpl implements DoctorDAO{
 	}
 
 	@Override
-	public Doctor getDoctorById(BigDecimal id) {
+	public Doctor getDoctorById(int id) {
 		Session currentSession=sessionFactory.getCurrentSession();
 		
 		Doctor doctor=currentSession.get(Doctor.class , id);

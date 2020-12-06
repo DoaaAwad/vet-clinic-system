@@ -3,7 +3,6 @@
  */
 package com.doaa.vetclinic.DAOs;
 
-import java.math.BigDecimal;
 import java.util.List;
 
 import org.hibernate.Session;
@@ -37,18 +36,14 @@ public class PetDAOImpl implements PetDAO{
 	}
 
 	@Override
-	public List<Pet> listPetsByOwnerId(BigDecimal ownerId) {
+	public List<Pet> listPetsByOwnerId(int ownerId) {
 		
 		Session currentSession=sessionFactory.getCurrentSession();
 		
 		Query query=null;
 		
-		if(ownerId != null) {
-			query=currentSession.createQuery("from Pet where owner =:ownerId" , Pet.class);
-			query.setParameter("ownerId", ownerId);
-		} 
-		else
-			return listAllPets();
+		query=currentSession.createQuery("from Pet where owner =:ownerId" , Pet.class);
+		query.setParameter("ownerId", ownerId);
 		
 		return query.getResultList();
 	}
@@ -62,7 +57,7 @@ public class PetDAOImpl implements PetDAO{
 	}
 
 	@Override
-	public void deletePet(BigDecimal id) {
+	public void deletePet(int id) {
 		Session currentSession=sessionFactory.getCurrentSession();
 		
 		Query query=currentSession.createQuery("delete from Pet where petId=:id");
@@ -71,7 +66,7 @@ public class PetDAOImpl implements PetDAO{
 	}
 
 	@Override
-	public Pet getPetById(BigDecimal id) {
+	public Pet getPetById(int id) {
 
 		Session currentSession=sessionFactory.getCurrentSession();
 		

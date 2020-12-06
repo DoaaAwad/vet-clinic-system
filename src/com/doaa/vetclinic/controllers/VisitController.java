@@ -3,7 +3,6 @@
  */
 package com.doaa.vetclinic.controllers;
 
-import java.math.BigDecimal;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -64,7 +63,7 @@ public class VisitController {
 	}
 	
 	@GetMapping("/showFormToUpdate")
-	public String showFormToUpdate(@RequestParam("visitId") BigDecimal id , Model model) {
+	public String showFormToUpdate(@RequestParam("visitId") int id , Model model) {
 		List<Doctor> doctorsList = vetClinicService.listAllDoctors();
 		List<Clinic> clinicList = vetClinicService.listAllClinics();
 		List<Pet> petList =vetClinicService.listAllPets();
@@ -81,7 +80,7 @@ public class VisitController {
 	}
 	
 	@GetMapping("/deleteVisit")
-	public String deleteVisit(@RequestParam("visitId") BigDecimal id , Model model) {
+	public String deleteVisit(@RequestParam("visitId") int id , Model model) {
 		
 		vetClinicService.deleteVisit(id);
 		
@@ -90,7 +89,7 @@ public class VisitController {
 	
 	
 	@GetMapping("/searchByVisitId")
-	public String searchByVisitId(@RequestParam("visitId") BigDecimal visitId ,Model model) {
+	public String searchByVisitId(@RequestParam("visitId") int visitId ,Model model) {
 		
 		Visit visit=vetClinicService.getVisitById(visitId);
 		

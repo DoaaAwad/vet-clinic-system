@@ -3,7 +3,6 @@
  */
 package com.doaa.vetclinic.DAOs;
 
-import java.math.BigDecimal;
 import java.util.List;
 
 import org.hibernate.Session;
@@ -46,7 +45,7 @@ public class OwnerDAOImpl implements OwnerDAO{
 	}
 
 	@Override
-	public void deleteOwner(BigDecimal id) {
+	public void deleteOwner(int id) {
 
 		Session currentSession=sessionFactory.getCurrentSession();
 		
@@ -57,7 +56,7 @@ public class OwnerDAOImpl implements OwnerDAO{
 	}
 
 	@Override
-	public Owner getOwnerById(BigDecimal id) {
+	public Owner getOwnerById(int id) {
 		//get current hibernate session
 		Session currentSession=sessionFactory.getCurrentSession();
 		

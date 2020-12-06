@@ -71,7 +71,7 @@
 					
 					<td> <a href="${updateLink}" >Update</a>
 					
-					<a href="${deleteLink}" onClick="if(!(confirm('Are you sure you want to delete Visit ${tempVisit.visitName} ?'))) return false" >
+					<a href="${deleteLink}" onClick="if(!(confirm('Are you sure you want to delete Visit ?'))) return false" >
 					Delete</a> </td>
 				</tr>
 			</c:forEach>

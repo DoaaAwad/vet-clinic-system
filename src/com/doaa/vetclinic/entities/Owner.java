@@ -3,7 +3,6 @@
  */
 package com.doaa.vetclinic.entities;
 
-import java.math.BigDecimal;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -24,7 +23,7 @@ public class Owner {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="OWNER_ID")
-	private BigDecimal ownerId;
+	private int ownerId;
 	
 	@Column(name = "NAME")
 	private String ownerName;
@@ -36,7 +35,7 @@ public class Owner {
 	private String email;
 	
 	@Column(name = "PHONE")
-	private BigDecimal phone;
+	private int phone;
 	
 	@Column(name = "ADDRESS")
 	private String address;
@@ -48,7 +47,7 @@ public class Owner {
 		
 	}
 
-	public Owner(BigDecimal ownerId, String ownerName, String gender, String email, BigDecimal phone, String address, List<Pet> ownerPets) {
+	public Owner(int ownerId, String ownerName, String gender, String email, int phone, String address, List<Pet> ownerPets) {
 		this.ownerId = ownerId;
 		this.ownerName = ownerName;
 		this.gender = gender;
@@ -58,11 +57,11 @@ public class Owner {
 		this.ownerPets = ownerPets;
 	}
 
-	public BigDecimal getOwnerId() {
+	public int getOwnerId() {
 		return ownerId;
 	}
 
-	public void setOwnerId(BigDecimal ownerId) {
+	public void setOwnerId(int ownerId) {
 		this.ownerId = ownerId;
 	}
 
@@ -90,11 +89,11 @@ public class Owner {
 		this.email = email;
 	}
 
-	public BigDecimal getPhone() {
+	public int getPhone() {
 		return phone;
 	}
 
-	public void setPhone(BigDecimal phone) {
+	public void setPhone(int phone) {
 		this.phone = phone;
 	}
 

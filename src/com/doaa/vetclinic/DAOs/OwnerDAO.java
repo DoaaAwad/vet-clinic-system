@@ -3,7 +3,6 @@
  */
 package com.doaa.vetclinic.DAOs;
 
-import java.math.BigDecimal;
 import java.util.List;
 
 import com.doaa.vetclinic.entities.Owner;
@@ -18,8 +17,8 @@ public interface OwnerDAO {
 
 	public void saveOwner(Owner owner);
 
-	public void deleteOwner(BigDecimal id);
+	public void deleteOwner(int id);
 	
-	public Owner getOwnerById(BigDecimal id);
+	public Owner getOwnerById(int id);
 	
 }

@@ -3,7 +3,6 @@
  */
 package com.doaa.vetclinic.DAOs;
 
-import java.math.BigDecimal;
 import java.util.List;
 
 import org.hibernate.Session;
@@ -45,7 +44,7 @@ public class VisitDAOImpl implements VisitDAO {
 	}
 
 	@Override
-	public void deleteVisit(BigDecimal id) {
+	public void deleteVisit(int id) {
 		
 		Session currentSession=sessionFactory.getCurrentSession();
 		
@@ -57,7 +56,7 @@ public class VisitDAOImpl implements VisitDAO {
 	}
 
 	@Override
-	public Visit getVisitById(BigDecimal id) {
+	public Visit getVisitById(int id) {
 		
 		Session currentSession=sessionFactory.getCurrentSession();
 		

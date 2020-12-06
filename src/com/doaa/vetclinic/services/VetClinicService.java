@@ -1,6 +1,5 @@
 package com.doaa.vetclinic.services;
 
-import java.math.BigDecimal;
 import java.util.List;
 
 import com.doaa.vetclinic.entities.Clinic;
@@ -22,9 +21,9 @@ public interface VetClinicService {
 
 	public void saveOwner(Owner owner);
 
-	public void deleteOwner(BigDecimal id);
+	public void deleteOwner(int id);
 	
-	public Owner getOwnerById(BigDecimal id);
+	public Owner getOwnerById(int id);
 	
 
 	
@@ -32,13 +31,13 @@ public interface VetClinicService {
 	
 	public List<Pet> listAllPets();
 	
-	public List<Pet> listPetsByOwnerId(BigDecimal ownerId);
+	public List<Pet> listPetsByOwnerId(int ownerId);
 
 	public void savePet(Pet pet);
 
-	public void deletePet(BigDecimal id);
+	public void deletePet(int id);
 	
-	public Pet getPetById(BigDecimal id);
+	public Pet getPetById(int id);
 	
 	
 	
@@ -46,15 +45,15 @@ public interface VetClinicService {
 	
 	public List<Clinic> listAllClinics();
 	
-	public List<Clinic> searchClinicByPhone(BigDecimal phoneNum);
+	public List<Clinic> searchClinicByPhone(int phoneNum);
 	
 	public List<Clinic> searchClinicByAddress(String address);
 
 	public void saveClinic(Clinic clinic);
 
-	public void deleteClinic(BigDecimal id);
+	public void deleteClinic(int id);
 	
-	public Clinic getClinicById(BigDecimal id);
+	public Clinic getClinicById(int id);
 	
 	
 	
@@ -62,13 +61,13 @@ public interface VetClinicService {
 	
 	public List<Doctor> listAllDoctors();
 	
-	public List<Doctor> listDoctorsByClinicId(BigDecimal clinicId);
+	public List<Doctor> listDoctorsByClinicId(int clinicId);
 	
 	public void saveDoctor(Doctor doctor);
 
-	public void deleteDoctor(BigDecimal id);
+	public void deleteDoctor(int id);
 	
-	public Doctor getDoctorById(BigDecimal id);
+	public Doctor getDoctorById(int id);
 	
 	
 	
@@ -78,8 +77,8 @@ public interface VetClinicService {
 		
 	public void saveVisit(Visit visit);
 
-	public void deleteVisit(BigDecimal id);
+	public void deleteVisit(int id);
 	
-	public Visit getVisitById(BigDecimal id);
+	public Visit getVisitById(int id);
 	
 }
