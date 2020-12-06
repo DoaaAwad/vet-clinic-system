@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.doaa.vetclinic.entities.Clinic;
 import com.doaa.vetclinic.services.VetClinicService;
@@ -22,6 +23,7 @@ import com.doaa.vetclinic.services.VetClinicService;
  * @author doaa1
  *
  */
+@RestController
 @Controller
 @RequestMapping("/clinic")
 public class ClinicController {

@@ -22,7 +22,7 @@
 
 	<div id="wrapper">
 		<div id="header">
-		<h2> Visit Relationship Manager</h2>
+		<h2> Visit Manager</h2>
 		</div>
 	</div>
 	

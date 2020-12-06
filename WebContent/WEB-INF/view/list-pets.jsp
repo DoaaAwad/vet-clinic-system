@@ -22,7 +22,7 @@
 
 	<div id="wrapper">
 		<div id="header">
-		<h2> Pet Relationship Manager</h2>
+		<h2> Pet Manager</h2>
 		</div>
 	</div>
 	

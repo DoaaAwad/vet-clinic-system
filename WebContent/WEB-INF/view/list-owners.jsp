@@ -22,7 +22,7 @@
 
 	<div id="wrapper">
 		<div id="header">
-		<h2> Owner Relationship Manager</h2>
+		<h2> Owner Manager</h2>
 		</div>
 	</div>
 	
